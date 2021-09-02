@@ -9,8 +9,11 @@ function App() {
 
   return (
     <div className="App" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: 75 }}>
-      <div id="nah" onClick={() => { 
-        document.getElementById('nah').className = "test"
+      <div class="nah" onClick={() => { 
+        document.getElementsByClassName('nah')[0].className = "test"
+        setTimeout(() => {
+          document.getElementsByClassName('test')[0].className = "test2"
+        }, 1000)
       }}>alo</div>
       <div style={{ width: '60%', }}>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', height: 200, }}>
@@ -53,13 +56,19 @@ function App() {
               <i>(To get a fully customizable model with a graphical report, visit my other pandemic simulator project <a href={'https://tuananhc.github.io/pandemic_simulator/'}>here</a>)</i>
             </div>
             <div style={{ display: 'flex', flex: 0.5, justifyContent: 'flex-end' }}>
+            <div style={{ display: 'flex', flex: 0.5, justifyContent: 'flex-end' }}>
+              {GetBasicModel()}
+            </div>
             </div>
           </div>
           
           <div style={{ display: 'flex', flex: 0.1, flexDirection: 'row' }}>
             <div style={{ display: 'flex', flex: 0.5, flexDirection: 'column', textAlign: 'start', flexWrap: 'wrap' }}>
-              <p>The model above are relatively small, merely more than 50 people, which can represent a small block in a neighbourhood.</p>  
-              <p>Let's see how the disease spread in a bigger community, with the same initial infected proportion of 10%.</p>
+              <p>The model above are relatively small, merely more than 50 people, which can only represent a small block in a neighbourhood.</p>  
+              <p>
+                Let's see how the disease spread in a bigger community with 200 people, there is an initial infected proportion of 3% and a chance of
+                10% that those who came in contact with an infected individual contract with the disease.
+              </p>
             </div>
             <div style={{ display: 'flex', flex: 0.5, justifyContent: 'flex-end' }}>
               {BigModel()}

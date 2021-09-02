@@ -4,8 +4,7 @@ import ring from '../../assets/redCircle.png';
 
 export function BigModel() {
   const [population, setPopulation] = useState(200);
-  const infectedPercent = 5
-  const contagiousRadius = 1
+  const infectedPercent = 3
   const susceptibleRate = 100
   const recoveryTime = 3
   const [populationList, setPopulationList] = useState([])

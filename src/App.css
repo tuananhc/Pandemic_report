@@ -40,7 +40,7 @@
 .test {
   height: 10;
   width: 10;
-  background-color: red;
+  background-color: green;
   animation-name: test-animation;
   animation-duration: 2s;
 }
@@ -51,5 +51,22 @@
   }
   to {
     background-color: red;
+  }
+}
+
+.test2 {
+  background-color: yellow;
+  animation-name: test2-animation;
+  animation-duration: 2s;
+}
+
+@keyframes test2-animation {
+  from {
+      background-color: '#FF0000';
+      transform: rotate(0deg);
+  }
+  to {
+      background-color: yellow;
+      transform: rotate(360deg);
   }
 }

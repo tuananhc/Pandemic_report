@@ -1,0 +1,27 @@
+.infected {
+    animation-name: infected-animation;
+    animation-duration: 2s;
+}
+
+@keyframes infected-animation {
+    from {
+        background-color: '#66FF33';
+    }
+    to {
+        background-color: '#FF0000';
+    }
+}
+
+.recovered {
+    animation-name: recovered-animation;
+    animation-duration: 2s;
+}
+
+@keyframes recovered-animation {
+    from {
+        background-color: '#FF0000';
+    }
+    to {
+        background-color: '#808080';
+    }
+}
